@@ -219,7 +219,6 @@ body{font-family:var(--fb);background:#f0ebe1;color:var(--gr);line-height:1.6}
   <a href="#checklist" class="sn">Checklist</a>
   <a href="#deliverables" class="sn">Deliverables</a>
   <a href="#tools" class="sn">Tools</a>
-  <a href="#edit-guide" class="sn">Edit guide</a>
 </div>
 
 <!-- HERO -->
@@ -598,95 +597,6 @@ body{font-family:var(--fb);background:#f0ebe1;color:var(--gr);line-height:1.6}
     </div>
   </div>
 </div>
-
-<!-- EDIT GUIDE -->
-<div class="sec sec-lt" id="edit-guide">
-  <div class="col">
-    <span class="eyebrow ey-r">Edit guide</span>
-    <h2 class="sec-h">How to update this microsite later</h2>
-    <p class="sec-p">You do not need Claude to make routine updates. Here is how to do the most common edits yourself, directly in GitHub.</p>
-
-    <div class="guide-card">
-      <div class="guide-hdr" onclick="toggleGuide(this)">
-        <div class="guide-hdr-title">&#9658; Change a number or sentence in the text</div>
-        <span class="guide-arrow">&#9660;</span>
-      </div>
-      <div class="guide-body">
-        <div class="guide-step"><div class="guide-step-n">1</div><div class="guide-step-body">Go to <strong>github.com/afsarta-prog/mad-youth-progression-platform</strong> and sign in.</div></div>
-        <div class="guide-step"><div class="guide-step-n">2</div><div class="guide-step-body">Click <strong>transition.html</strong> in the file list &rarr; click the <strong>pencil icon &#9998;</strong> at top right to open the editor.</div></div>
-        <div class="guide-step"><div class="guide-step-n">3</div><div class="guide-step-body">Press <span class="code-inline">Ctrl+F</span> (or Cmd+F on Mac) and search for the exact sentence or number you want to change.</div></div>
-        <div class="guide-step"><div class="guide-step-n">4</div><div class="guide-step-body">Edit the text. <strong>Only change text between tags.</strong> For example: <span class="code-inline">&lt;p&gt;Change this text&lt;/p&gt;</span> &mdash; only edit what is between the <span class="code-inline">&lt;p&gt;</span> and <span class="code-inline">&lt;/p&gt;</span>. Never change the tags themselves.</div></div>
-        <div class="guide-step"><div class="guide-step-n">5</div><div class="guide-step-body">Scroll up &rarr; click <strong>Commit changes</strong> (green button) &rarr; write a short note like &ldquo;Update step 2 narration&rdquo; &rarr; click <strong>Commit changes</strong> again. Live in 2 minutes.</div></div>
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <div class="guide-hdr" onclick="toggleGuide(this)">
-        <div class="guide-hdr-title">&#9658; Update the programme dashboard numbers</div>
-        <span class="guide-arrow">&#9660;</span>
-      </div>
-      <div class="guide-body">
-        <p style="font-size:13px;color:var(--gm);margin-bottom:14px;line-height:1.65">The dashboard numbers are written directly in the HTML. To update them after a new Pulse cycle:</p>
-        <div class="guide-step"><div class="guide-step-n">1</div><div class="guide-step-body">Open the file in GitHub editor (steps 1-2 above).</div></div>
-        <div class="guide-step"><div class="guide-step-n">2</div><div class="guide-step-body">Search for <span class="code-inline">341</span> to find the total youth count. Change it to the new number everywhere it appears.</div></div>
-        <div class="guide-step"><div class="guide-step-n">3</div><div class="guide-step-body">Search for <span class="code-inline">kpi-v</span> to find the KPI strip numbers (total, male, female, studying, working, etc.). Each looks like <span class="code-inline">&lt;div class="kpi-v" ...&gt;125&lt;/div&gt;</span> &mdash; change the number between the tags.</div></div>
-        <div class="guide-step"><div class="guide-step-n">4</div><div class="guide-step-body">For the chapter table, search for the chapter name (e.g. <span class="code-inline">Delhi</span>) in the JavaScript section at the bottom and update the numbers in that row.</div></div>
-        <div class="guide-step"><div class="guide-step-n">5</div><div class="guide-step-body">Commit changes. Or &mdash; for major number updates, come back to Claude with the new Pulse CSV and ask to regenerate the dashboard section only. Faster and no risk of errors.</div></div>
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <div class="guide-hdr" onclick="toggleGuide(this)">
-        <div class="guide-hdr-title">&#9658; Add or remove a tool link</div>
-        <span class="guide-arrow">&#9660;</span>
-      </div>
-      <div class="guide-body">
-        <div class="guide-step"><div class="guide-step-n">1</div><div class="guide-step-body">Open the file in GitHub editor and search for <span class="code-inline">Link to be added</span>.</div></div>
-        <div class="guide-step"><div class="guide-step-n">2</div><div class="guide-step-body">Find the tool card you want to activate. Change <span class="code-inline">&lt;div class="tool-card"&gt;</span> to <span class="code-inline">&lt;a href="YOUR_URL" class="tool-card live"&gt;</span>. Change the closing <span class="code-inline">&lt;/div&gt;</span> to <span class="code-inline">&lt;/a&gt;</span>.</div></div>
-        <div class="guide-step"><div class="guide-step-n">3</div><div class="guide-step-body">Change <span class="code-inline">tb-soon</span> to <span class="code-inline">tb-live</span> on the badge. Change the badge text from &ldquo;Link to be added&rdquo; to &ldquo;Open now&rdquo;.</div></div>
-        <div class="guide-step"><div class="guide-step-n">4</div><div class="guide-step-body">Change the link text at the bottom from <span class="code-inline">tl-soon</span> to <span class="code-inline">tl-live</span> and update the URL text.</div></div>
-        <div class="guide-step"><div class="guide-step-n">5</div><div class="guide-step-body">Commit changes.</div></div>
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <div class="guide-hdr" onclick="toggleGuide(this)">
-        <div class="guide-hdr-title">&#9658; Add a new page to the platform</div>
-        <span class="guide-arrow">&#9660;</span>
-      </div>
-      <div class="guide-body">
-        <div class="guide-step"><div class="guide-step-n">1</div><div class="guide-step-body">Ask Claude to build the new page. Download the .html file it produces.</div></div>
-        <div class="guide-step"><div class="guide-step-n">2</div><div class="guide-step-body">Go to the GitHub repo &rarr; <strong>Add file &rarr; Upload files</strong> &rarr; drag the new .html file in &rarr; Commit changes.</div></div>
-        <div class="guide-step"><div class="guide-step-n">3</div><div class="guide-step-body">Open <span class="code-inline">index.html</span> in the GitHub editor and add a link to the new page. The URL will be <span class="code-inline">yourpage.html</span> (just the filename &mdash; no full URL needed since it is in the same folder).</div></div>
-        <div class="guide-step"><div class="guide-step-n">4</div><div class="guide-step-body">Commit. Live in 2 minutes. Every page is just one more .html file in the same repo.</div></div>
-      </div>
-    </div>
-
-    <div class="guide-card">
-      <div class="guide-hdr" onclick="toggleGuide(this)">
-        <div class="guide-hdr-title">&#9658; Something broke &mdash; how to restore</div>
-        <span class="guide-arrow">&#9660;</span>
-      </div>
-      <div class="guide-body">
-        <div class="guide-step"><div class="guide-step-n">1</div><div class="guide-step-body">Go to the repo &rarr; click <strong>transition.html</strong> &rarr; click <strong>History</strong> (clock icon, top right of file view).</div></div>
-        <div class="guide-step"><div class="guide-step-n">2</div><div class="guide-step-body">Find the last version that was working. Click on it to see the file at that point.</div></div>
-        <div class="guide-step"><div class="guide-step-n">3</div><div class="guide-step-body">Click <strong>Raw</strong> &rarr; Select All &rarr; Copy. Then go back to the current file, open the editor, Select All, paste the old version. Commit.</div></div>
-        <div class="guide-step"><div class="guide-step-n">4</div><div class="guide-step-body">Or: bring the file back to Claude, describe what broke, and ask for a fix. Paste the broken HTML directly into the chat.</div></div>
-      </div>
-    </div>
-
-    <div style="margin-top:20px;background:#f8f6f2;border-radius:10px;padding:16px 18px;border:1px solid var(--glt)">
-      <div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--gr);margin-bottom:8px">Quick rule for safe editing</div>
-      <div style="font-size:13px;color:var(--gm);line-height:1.7">
-        Only edit text <strong>between</strong> tags &mdash; never the tags themselves.<br>
-        <span class="code-inline">&lt;p class="sec-p"&gt;</span> <strong>Edit this part only</strong> <span class="code-inline">&lt;/p&gt;</span><br>
-        Never change anything inside <span class="code-inline">&lt;style&gt;</span> ... <span class="code-inline">&lt;/style&gt;</span> unless you are confident with CSS.<br>
-        If unsure, make a copy of the file before editing.
-      </div>
-    </div>
-  </div>
-</div>
-
 <div class="footer">
   <p class="footer-txt">MAD Aftercare &middot; Youth Progression Platform &middot; 2026-27 &middot; <a href="index.html">Platform home</a></p>
 </div>
